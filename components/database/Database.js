@@ -434,9 +434,9 @@ export const Items = [
         productImage: require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRedBlack.png'),
         isAvailable: true,
         productImageList: [
-            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRed&Black.png'),
-            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRed&Black2.png'),
-            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRed&Black3.png'),
+            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRedBlack.png'),
+            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRedBlack2.png'),
+            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRedBlack3.png'),
         ]
     },
     {
