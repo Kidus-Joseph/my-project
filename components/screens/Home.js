@@ -51,18 +51,59 @@ const Home = ({navigation}) => {
 
     const CleatCard = ({data}) => {
         return(
-            <TouchableOpacity>
-                <View>
-                    {
-                        data.isOff ? (
-                            <View>
-                                <Text>{data.offPercentage}</Text>
-                            </View>
-                        ) : null}
-                    <Image source={data.productImage}/>
+            <TouchableOpacity
+                style={{
+                    width: '48%',
+                    marginVertical: 14,
+                }}>
+                <View 
+                    style={{
+                        width: '100%',
+                        height: 100,
+                        borderRadius: 10,
+                        backgroundColor: COLOURS.backgroundLight,
+                        position: 'relative',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        marginBottom: 8,
+                    }}>
+                    {data.isOff ? (
+                        <View
+                            style={{
+                                position: 'absolute',
+                                width: '20%',
+                                height: '24%',
+                                backgroundColor: COLOURS.green,
+                                top: 0,
+                                left: 0,
+                                borderTopLeftRadius: 10,
+                                borderBottomRightRadius: 10,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}>
+                            <Text style={{
+                                fontSize: 12,
+                                color: COLOURS.white,
+                                fontWeight: 'bold',
+                                letterSpacing: 1,
+                            }}>{data.offPercentage}</Text>
+                        </View>
+                    ) : null}
+                    <Image source={data.productImage} style={{
+                        width: '80%', height: '80%', resizeMode: 'contain'}}/>
                 </View>
+                <Text 
+                    style={{
+                        fontSize: 12,
+                        color: COLOURS.black,
+                        fontWeight: "600",
+                        marginBottom: 2,
+                    }}> {data.productName}
+                </Text>
+                {data.category == 'jerseys' || 'shinguards' || 'balls' ? null : null}
+                <Text> &#36; {data.productPrice} </Text>
             </TouchableOpacity>
-        )
+        );
     };
 
   return (
@@ -119,42 +160,232 @@ const Home = ({navigation}) => {
                 {'\n'}This store offers cleats, jerseys, shin guards, and balls
             </Text>
         </View>
-        <View style={{
-            padding: 16,
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-        }}>
-            <View style={{
+        <View 
+            style={{
+                padding: 16,
+            }}>
+            <View 
+                style={{
+                padding: 16,
                 flexDirection: 'row',
                 alignItems: 'center',
+                justifyContent: 'space-between',
             }}>
-                <Text style={{
-                    fontSize: 18,
-                    color: COLOURS.black,
-                    fontWeight: "500",
-                    letterSpacing: 1,
-                }}>Cleats</Text>
-                <Text style={{
-                    fontSize: 14,
-                    color: COLOURS.black,
-                    fontWeight: "400",
-                    opacity: 0.5,
-                    marginLeft: 10,
-                }}>10</Text>
+                <View 
+                    style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                }}>
+                    <Text 
+                        style={{
+                        fontSize: 18,
+                        color: COLOURS.black,
+                        fontWeight: "500",
+                        letterSpacing: 1,
+                    }}>
+                    Cleats
+                    </Text>
+                    <Text 
+                        style={{
+                        fontSize: 14,
+                        color: COLOURS.black,
+                        fontWeight: "400",
+                        opacity: 0.5,
+                        marginLeft: 10,
+                    }}>
+                    10
+                    </Text>
+                </View>
+                    <Text 
+                        style={{
+                            fontSize: 14,
+                            color: COLOURS.blue,
+                            fontWeight: "400",
+                        }}> 
+                        See All
+                    </Text>
+                </View>
+                <View 
+                    style={{
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-around',
+                    }}>
+                {cleats.map((data) => {
+                    return <CleatCard data={data} key={data.id}/>;
+                })}
             </View>
-            <Text style={{
-                fontSize: 14,
-                color: COLOURS.blue,
-                fontWeight: "400",
-            }}> See All</Text>
         </View>
-        <View>
-            {
-                cleats.map((data) => {
-                    return <CleatCard data={data} key={data.id}/>
-                })
-            }
+
+        <View 
+            style={{
+                padding: 16,
+            }}>
+            <View 
+                style={{
+                padding: 16,
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+            }}>
+                <View 
+                    style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                }}>
+                    <Text 
+                        style={{
+                        fontSize: 18,
+                        color: COLOURS.black,
+                        fontWeight: "500",
+                        letterSpacing: 1,
+                    }}>
+                    Jerseys
+                    </Text>
+                    <Text 
+                        style={{
+                        fontSize: 14,
+                        color: COLOURS.black,
+                        fontWeight: "400",
+                        opacity: 0.5,
+                        marginLeft: 10,
+                    }}>
+                    10
+                    </Text>
+                </View>
+                    <Text 
+                        style={{
+                            fontSize: 14,
+                            color: COLOURS.blue,
+                            fontWeight: "400",
+                        }}> 
+                        See All
+                    </Text>
+                </View>
+                <View 
+                    style={{
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-around',
+                    }}>
+                {jerseys.map((data) => {
+                    return <CleatCard data={data} key={data.id}/>;
+                })}
+            </View>
+        </View>
+
+        <View 
+            style={{
+                padding: 16,
+            }}>
+            <View 
+                style={{
+                padding: 16,
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+            }}>
+                <View 
+                    style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                }}>
+                    <Text 
+                        style={{
+                        fontSize: 18,
+                        color: COLOURS.black,
+                        fontWeight: "500",
+                        letterSpacing: 1,
+                    }}>
+                    Shinguards
+                    </Text>
+                    <Text 
+                        style={{
+                        fontSize: 14,
+                        color: COLOURS.black,
+                        fontWeight: "400",
+                        opacity: 0.5,
+                        marginLeft: 10,
+                    }}>
+                    10
+                    </Text>
+                </View>
+                    <Text 
+                        style={{
+                            fontSize: 14,
+                            color: COLOURS.blue,
+                            fontWeight: "400",
+                        }}> 
+                        See All
+                    </Text>
+                </View>
+                <View 
+                    style={{
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-around',
+                    }}>
+                {shinguards.map((data) => {
+                    return <CleatCard data={data} key={data.id}/>;
+                })}
+            </View>
+        </View>
+
+        <View 
+            style={{
+                padding: 16,
+            }}>
+            <View 
+                style={{
+                padding: 16,
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+            }}>
+                <View 
+                    style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                }}>
+                    <Text 
+                        style={{
+                        fontSize: 18,
+                        color: COLOURS.black,
+                        fontWeight: "500",
+                        letterSpacing: 1,
+                    }}>
+                    Balls
+                    </Text>
+                    <Text 
+                        style={{
+                        fontSize: 14,
+                        color: COLOURS.black,
+                        fontWeight: "400",
+                        opacity: 0.5,
+                        marginLeft: 10,
+                    }}>
+                    10
+                    </Text>
+                </View>
+                    <Text 
+                        style={{
+                            fontSize: 14,
+                            color: COLOURS.blue,
+                            fontWeight: "400",
+                        }}> 
+                        See All
+                    </Text>
+                </View>
+                <View 
+                    style={{
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-around',
+                    }}>
+                {balls.map((data) => {
+                    return <CleatCard data={data} key={data.id}/>;
+                })}
+            </View>
         </View>
       </ScrollView>
     </View>
