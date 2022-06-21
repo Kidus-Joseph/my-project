@@ -400,12 +400,12 @@ export const Items = [
         productPrice:35,
         description:'Soccer confidence flows when you know everything\'s in the right place. These adidas Predator League shin guards keep you bossing the pitch with robust hard shields backed with EVA for absorbing the hardest hits. They come with separate compression sleeves designed to hold them firmly in place.',
         isOff:false,
-        productImage: require('../database/images/Shinguards/AdidasPredatorLeagueShinGuards-Blue&Turbo.png'),
+        productImage: require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsBlueTurbo.png'),
         isAvailable: true,
         productImageList: [
-            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuards-Blue&Turbo.png'),
-            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuards-Blue&Turbo2.png'),
-            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuards-Blue&Turbo3.png'),
+            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsBlueTurbo.png'),
+            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsBlueTurbo2.png'),
+            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsBlueTurbo3.png'),
         ]
     },
     {
@@ -416,12 +416,12 @@ export const Items = [
         description:'A trusted name on the soccer pitch. These adidas Tiro League Shin Guards have super tough, flexible shields that are held in place by stretchy retaining sleeves. Their EVA backing is molded to better fit your shins and to increase airflow. The low-profile construction means you\'ll never lose focus.',
         isOff:true,
         offPercentage:10,
-        productImage: require('../database/images/Shinguards/AdidasTiroLeagueShinguards-White&Black.png'),
+        productImage: require('../database/images/Shinguards/AdidasTiroLeagueShinguardsWhiteBlack.png'),
         isAvailable: true,
         productImageList: [
-            require('../database/images/Shinguards/AdidasTiroLeagueShinguards-White&Black.png'),
-            require('../database/images/Shinguards/AdidasTiroLeagueShinguards-White&Black2.png'),
-            require('../database/images/Shinguards/AdidasTiroLeagueShinGuards-White&Black3.png'),
+            require('../database/images/Shinguards/AdidasTiroLeagueShinguardsWhiteBlack.png'),
+            require('../database/images/Shinguards/AdidasTiroLeagueShinguardsWhiteBlack2.png'),
+            require('../database/images/Shinguards/AdidasTiroLeagueShinGuardsWhiteBlack3.png'),
         ]
     },
     {
@@ -431,12 +431,12 @@ export const Items = [
         productPrice:16,
         description:'The beast is back. These adidas Predator 20 League Shin Guards put up a ferocious defence with EVA-backed shields that match the contours of your shins and absorb impacts. Soft, synthetic lining and a close fit mean you\'ll control the football pitch in comfort. Pull on the compression sleeve to keep everything tight.',
         isOff:false,
-        productImage: require('../database/images/Shinguards/AdidasPredatorLeagueShinGuards-Red&Black.png'),
+        productImage: require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRedBlack.png'),
         isAvailable: true,
         productImageList: [
-            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuards-Red&Black.png'),
-            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuards-Red&Black2.png'),
-            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuards-Red&Black3.png'),
+            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRed&Black.png'),
+            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRed&Black2.png'),
+            require('../database/images/Shinguards/AdidasPredatorLeagueShinGuardsRed&Black3.png'),
         ]
     },
     {
@@ -447,12 +447,12 @@ export const Items = [
         description:'Soccer confidence flows when you know everything\'s in the right place. Extra padding around the ankle area makes these adidas Predator Match shin guards the perfect choice when you need to bolster your defenses. Held in place by a hook-and-loop closure, the attached hard shields have a layer of EVA backing for shock-absorption.',
         isOff:true,
         offPercentage:20,
-        productImage: require('../database/images/Shinguards/AdidasPredatorMatchShinGuards-Blue&Turbo.png'),
+        productImage: require('../database/images/Shinguards/AdidasPredatorMatchShinGuardsBlueTurbo.png'),
         isAvailable: true,
         productImageList: [
-            require('../database/images/Shinguards/AdidasPredatorMatchShinGuards-Blue&Turbo.png'),
-            require('../database/images/Shinguards/AdidasPredatorMatchShinGuards-Blue&Turbo2.png'),
-            require('../database/images/Shinguards/AdidasPredatorMatchShinGuards-Blue&Turbo3.png'),
+            require('../database/images/Shinguards/AdidasPredatorMatchShinGuardsBlueTurbo.png'),
+            require('../database/images/Shinguards/AdidasPredatorMatchShinGuardsBlueTurbo2.png'),
+            require('../database/images/Shinguards/AdidasPredatorMatchShinGuardsBlueTurbo3.png'),
         ]
     },
     {
@@ -462,12 +462,12 @@ export const Items = [
         productPrice:20,
         description:'Soccer only flows when you feel free, so these lightweight adidas Predator X Match Shin Guards offer a solid defense without sacrificing agility. They\'re backed with molded, perforated EVA for comfortable cushioning and enhanced shock absorption. A compression sleeve holds everything in place so you stay one step ahead.',
         isOff:false,
-        productImage: require('../database/images/Shinguards/AdidasPredatorXMatchShinGuards-Blue&Pink.png'),
+        productImage: require('../database/images/Shinguards/AdidasPredatorXMatchShinGuardsBluePink.png'),
         isAvailable: true,
         productImageList: [
-            require('../database/images/Shinguards/AdidasPredatorXMatchShinGuards-Blue&Pink.png'),
-            require('../database/images/Shinguards/AdidasPredatorXMatchShinGuards-Blue&Pink2.png'),
-            require('../database/images/Shinguards/AdidasPredatorXMatchShinGuards-Blue&Pink3.png'),
+            require('../database/images/Shinguards/AdidasPredatorXMatchShinGuardsBluePink.png'),
+            require('../database/images/Shinguards/AdidasPredatorXMatchShinGuardsBluePink2.png'),
+            require('../database/images/Shinguards/AdidasPredatorXMatchShinGuardsBluePink3.png'),
         ]
     },
     {
@@ -520,10 +520,10 @@ export const Items = [
         description:'The Nike Mercurial Lite Shin Guards give you comfortable cushioning and a durable shell with a lightweight sleeve to keep it all in place. They have a low-profile and left/right-specific fit with perforated foam for breathability.',
         isOff:true,
         offPercentage:25,
-        productImage: require('../database/images/Ball/NikePitchTrainingBall-Blue&Black.png'),
+        productImage: require('../database/images/Ball/NikePitchTrainingBallBlueBlack.png'),
         isAvailable: true,
         productImageList: [
-            require('../database/images/Ball/NikePitchTrainingBall-Blue&Black.png'),
+            require('../database/images/Ball/NikePitchTrainingBallBlueBlack.png'),
         ]
     },
     {
@@ -534,10 +534,10 @@ export const Items = [
         description:'The Nike Mercurial Lite Shin Guards give you comfortable cushioning and a durable shell with a lightweight sleeve to keep it all in place. They have a low-profile and left/right-specific fit with perforated foam for breathability.',
         isOff:true,
         offPercentage:10,
-        productImage: require('../database/images/Ball/NikeStrikeSoccerBall-Yellow&Red.png'),
+        productImage: require('../database/images/Ball/NikeStrikeSoccerBallYellowRed.png'),
         isAvailable: true,
         productImageList: [
-            require('../database/images/Ball/NikeStrikeSoccerBall-Yellow&Red.png'),
+            require('../database/images/Ball/NikeStrikeSoccerBallYellowRed.png'),
         ]
     },
     {
