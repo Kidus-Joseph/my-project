@@ -83,7 +83,7 @@ export const Items = [
         isAvailable: true,
         productImageList: [
             require('../database/images/Cleats/NikePhantomGT2DynamicFitEliteFGFirm-GroundSoccerCleats.png'),
-            require('../database/images/Cleats/NikePhantomGT2DynamicFitEliteFGFirm-GroundSoccerCleats2.png'),
+            require('../database/images/Cleats/NikePhantomGT2DynamicFitEliteFFirm-GroundSoccerCleats2.png'),
             require('../database/images/Cleats/NikePhantomGT2DynamicFitEliteFGFirm-GroundSoccerCleats3.png'),
         ]
     },
@@ -110,12 +110,12 @@ export const Items = [
         description:'Plot your path to total control in this limited-collection version of adidas\' all-new Predator Edge soccer cleats. Quietly taking charge behind an eye-catching design, their Zone Skin upper has a series of distinct ribbed sections that are perfectly placed and precision-sculpted for every kind of ball contact. Underneath, a split outsole shifts weight to the forefoot, adding power to strikes. The laceless adidas PRIMEKNIT collar keeps you locked in as you master the pitch.',
         isOff:true,
         offPercentage:25,
-        productImage: require('../database/images/Cleats/AdidasPredatorEdgeGeometric+FirmGroundCleats.png'),
+        productImage: require('../database/images/Cleats/AdidasPredatorEdgeGeometricFirmGroundCleats.png'),
         isAvailable: true,
         productImageList: [
-            require('../database/images/Cleats/AdidasPredatorEdgeGeometric+FirmGroundCleats.png'),
-            require('../database/images/Cleats/AdidasPredatorEdgeGeometric+FirmGroundCleats2.png'),
-            require('../database/images/Cleats/AdidasPredatorEdgeGeometric+FirmGroundCleats3.png'),
+            require('../database/images/Cleats/AdidasPredatorEdgeGeometricFirmGroundCleats.png'),
+            require('../database/images/Cleats/AdidasPredatorEdgeGeometricFirmGroundCleats2.png'),
+            require('../database/images/Cleats/AdidasPredatorEdgeGeometricFirmGroundCleats3.png'),
         ]
     },
     {
@@ -282,8 +282,8 @@ export const Items = [
         isAvailable: true,
         productImageList: [
             require('../database/images/Jerseys/AdidasMexicoAwayJersery.png'),
-            require('../database/images/Jerseys/AdidasMexicoAwayJersery2.png'),
-            require('../database/images/Jerseys/AdidasMexicoAwayJersery3.png'),
+            require('../database/images/Jerseys/AdidasMexicoAwayJersey2.png'),
+            require('../database/images/Jerseys/AdidasMexicoAwayJersey3.png'),
         ]
     },
     {
@@ -421,7 +421,7 @@ export const Items = [
         productImageList: [
             require('../database/images/Shinguards/AdidasTiroLeagueShinguards-White&Black.png'),
             require('../database/images/Shinguards/AdidasTiroLeagueShinguards-White&Black2.png'),
-            require('../database/images/Shinguards/AdidasTiroLeagueShinguards-White&Black3.png'),
+            require('../database/images/Shinguards/AdidasTiroLeagueShinGuards-White&Black3.png'),
         ]
     },
     {
