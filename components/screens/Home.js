@@ -169,7 +169,7 @@ const Home = ({navigation}) => {
                     borderRadius:10,
                     backgroundColor:COLOURS.backgroundLight}}></Entypo>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('MyCart')}>
                 <MaterialCommunityIcons name="cart" style={{
                     fontSize: 18,
                     color:COLOURS.backgroundMedium,

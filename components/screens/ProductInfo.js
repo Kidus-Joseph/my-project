@@ -24,7 +24,7 @@ const ProductInfo = ({route, navigation}) => {
     });
 
     return unsubscribe;
-  }, [navigation])
+  }, [navigation]);
 
   //get product data by productID
 
@@ -125,7 +125,7 @@ const ProductInfo = ({route, navigation}) => {
                 paddingTop: 16,
                 paddingLeft: 16,
             }}>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.goBack('Home')}>
                 <Entypo 
                   name="chevron-left" 
                   style={{
