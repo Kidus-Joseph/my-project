@@ -1,8 +1,9 @@
-import { View, Text, StatusBar, ScrollView, TouchableOpacity, Image } from 'react-native'
+import { View, Text, StatusBar, ScrollView, TouchableOpacity, Image, onPress } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {COLOURS, Items} from '../database/Database';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 
 const Home = ({navigation}) => {
@@ -52,6 +53,7 @@ const Home = ({navigation}) => {
     const CleatCard = ({data}) => {
         return(
             <TouchableOpacity
+                onPress={() => navigation.navigate('ProductInfo', {productID:data.id})}
                 style={{
                     width: '48%',
                     marginVertical: 14,
@@ -86,7 +88,7 @@ const Home = ({navigation}) => {
                                 color: COLOURS.white,
                                 fontWeight: 'bold',
                                 letterSpacing: 1,
-                            }}>{data.offPercentage}</Text>
+                            }}>{data.offPercentage}%</Text>
                         </View>
                     ) : null}
                     <Image source={data.productImage} style={{
@@ -100,7 +102,47 @@ const Home = ({navigation}) => {
                         marginBottom: 2,
                     }}> {data.productName}
                 </Text>
-                {data.category == 'jerseys' || 'shinguards' || 'balls' ? null : null}
+                {data.category == 'jerseys' || 'shinguards' || 'balls' ? (
+                    data.isAvailable ? (
+                        <View 
+                            style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                            }}>
+                            <FontAwesome name='circle' 
+                                style={{
+                                    fontSize: 12,
+                                    marginRight: 6,
+                                    color: COLOURS.green,
+                                }}/>
+                            <Text
+                                style={{
+                                    fontSize: 12,
+                                    color: COLOURS.green,
+                                }}>Available
+                            </Text>
+                        </View>
+                    ) : (
+                        <View 
+                            style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                            }}>
+                            <FontAwesome name='circle' 
+                                style={{
+                                    fontSize: 12,
+                                    marginRight: 6,
+                                    color: COLOURS.red,
+                                }}/>
+                            <Text
+                                style={{
+                                    fontSize: 12,
+                                    color: COLOURS.red,
+                                }}> Unavailable
+                            </Text>
+                        </View>
+                    ) 
+                ): null}
                 <Text> &#36; {data.productPrice} </Text>
             </TouchableOpacity>
         );

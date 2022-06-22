@@ -15,7 +15,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerShown: false,
+          headerShown: true,
         }}>
         <Stack.Screen name='Home' component={Home}/>
         <Stack.Screen name='MyCart' component={MyCart}/>
