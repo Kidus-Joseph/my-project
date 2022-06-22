@@ -76,6 +76,7 @@ const ProductInfo = ({route, navigation}) => {
   //product horizontal scroll product card
 
   const renderProduct = ({item, index}) => {
+    return (
     <View 
       style={{
         width: width,
@@ -92,6 +93,7 @@ const ProductInfo = ({route, navigation}) => {
       }}
       />
     </View>
+    );
   }
 
   return (
@@ -314,8 +316,6 @@ const ProductInfo = ({route, navigation}) => {
         
         <View 
           style={{
-            position: 'absolute',
-            bottom: 10,
             height: '8%',
             width: '100%',
             justifyContent: 'center',
@@ -325,7 +325,7 @@ const ProductInfo = ({route, navigation}) => {
               onPress={() => product.isAvailable ? addToCart(product.id) : null}
               style={{
                 width: '86%',
-                height: '90%',
+                height: '50%',
                 backgroundColor: COLOURS.blue,
                 borderRadius: 20,
                 justifyContent: 'center',
