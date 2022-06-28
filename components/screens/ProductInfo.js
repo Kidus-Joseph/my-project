@@ -96,6 +96,25 @@ const ProductInfo = ({route, navigation}) => {
     );
   }
 
+  //calculate discounted price
+  function calcFunction (price, discountPercent, discountOn) {
+    if (discountOn === true) {
+      //console.log('Success')
+      return (
+        (price - (price * (discountPercent / 100)))
+      )
+    } else {
+      //console.log('Failure')
+      return (
+        price
+      )
+    };
+  };
+
+  const x = product.productPrice;
+  const y = product.offPercentage;
+  const z = product.isOff;
+
   return (
     <View
       style={{
@@ -304,11 +323,10 @@ const ProductInfo = ({route, navigation}) => {
                 maxWidth: '85%',
                 color: COLOURS.black,
                 marginBottom: 4,
-              }}>&#36; {product.productPrice}.00
+              }}>Price - &#36; {calcFunction(x, y, z)}
               </Text>
               <Text>
-                Tax Rate 2%~ &#36; {product.productPrice / 20} (&#36;
-                {product.productPrice + product.productPrice /20})
+                Full Price - &#36;{product.productPrice}
               </Text>
             </View>
           </View>

@@ -13,6 +13,8 @@ const Home = ({navigation}) => {
     const [shinguards, setShinGuards] = useState([]);
     const [balls, setBalls] = useState([]);
 
+    //calls on screen loads
+
     useEffect(() => {
         const unsubscribe = navigation.addListener('focus', () => {
             getDataFromDB();
@@ -48,6 +50,22 @@ const Home = ({navigation}) => {
         setBalls(ballsList);
     };
 
+    //Calculate Discounted Price
+
+    function calcPrices (price, percentage, discount) {
+        if (discount === true) {
+          //console.log('Success')
+          return (
+            (price - (price * (percentage / 100)))
+          )
+        } else {
+          //console.log('Failure')
+          return (
+            price
+          )
+        };
+      };
+    
     //create a product reusable card
 
     const CleatCard = ({data}) => {
@@ -143,7 +161,7 @@ const Home = ({navigation}) => {
                         </View>
                     ) 
                 ): null}
-                <Text> &#36; {data.productPrice} </Text>
+                <Text> &#36; {calcPrices(data.productPrice, data.offPercentage, data.isOff)} </Text>
             </TouchableOpacity>
         );
     };

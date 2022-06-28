@@ -8,7 +8,7 @@ import Toast from 'react-native-root-toast';
 const MyCart = ({navigation}) => {
 
   const [product, setProduct] = useState();
-  const [total, setTotal] = useState(null);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
@@ -43,9 +43,31 @@ const MyCart = ({navigation}) => {
     let total = 0;
     for (let index = 0; index < productData.length; index++) {
       let productPrice = productData[index].productPrice;
-      total = total + productPrice;
+      let offPercentage = productData[index].offPercentage;
+      let isOff = productData[index].isOff;
+      if (isOff === true) {
+        total = total + (productPrice - (productPrice * (offPercentage / 100)));
+      } else {
+        total = total + productPrice;
+      }
     }
-    setTotal(total);
+    setTotal(total.toFixed(2));
+  };
+
+  //Calculate Discounted Prices
+
+  function calcPrice (price, percentage, discount) {
+    if (discount === true) {
+      //console.log('Success')
+      return (
+        (price - (price * (percentage / 100)))
+      )
+    } else {
+      //console.log('Failure')
+      return (
+        price
+      )
+    };
   };
 
   //remove selected data from Cart
@@ -70,9 +92,9 @@ const MyCart = ({navigation}) => {
 
   const checkOut = async () => {
     try {
-      await AsyncStorage.removeItem('cartItem')
+      await AsyncStorage.removeItem('cartItems');
     } catch (error) {
-      return error
+      return error;
     }
 
     Toast.show("Items will be delivered soon.", {
@@ -140,12 +162,12 @@ const MyCart = ({navigation}) => {
                 maxWidth: '85%',
                 marginRight: 4,
               }}>
-              &#36;{data.productPrice}
+              &#36;{(calcPrice(data.productPrice, data.offPercentage, data.isOff))}
               </Text>
-              <Text>
+              {/* <Text>
                 (~&#36; 
                 {data.productPrice + data.productPrice / 20})
-                </Text>
+              </Text> */}
             </View>
           </View>
           <View 
@@ -263,6 +285,7 @@ const MyCart = ({navigation}) => {
           </View>
           <View>
             <View 
+              //key={data.key}
               style={{
                 paddingHorizontal: 16,
                 marginVertical: 10,
@@ -446,7 +469,7 @@ const MyCart = ({navigation}) => {
                     maxWidth: '80%',
                     color: COLOURS.black,
                     opacity: 0.8,
-                  }}>&#36;{total}.00</Text>
+                  }}>&#36;{total}</Text>
               </View>
               <View 
                 style={{
@@ -471,7 +494,7 @@ const MyCart = ({navigation}) => {
                     maxWidth: '80%',
                     color: COLOURS.black,
                     opacity: 0.8,
-                  }}>&#36;{total / 20}</Text>
+                  }}>&#36;{(total / 20).toFixed(2)}</Text>
               </View>
               <View 
                 style={{
@@ -494,7 +517,7 @@ const MyCart = ({navigation}) => {
                     fontWeight: '500',
                     maxWidth: '80%',
                     color: COLOURS.black,
-                  }}>&#36;{total + total / 20}</Text>
+                  }}>&#36;{(total * 1.2).toFixed(2)}</Text>
               </View>
             </View>
           </View>
@@ -525,7 +548,7 @@ const MyCart = ({navigation}) => {
                   color: COLOURS.white,
                   textTransform: 'uppercase',
                 }}>
-                CHECKOUT (&#36;{total + total / 20})
+                CHECKOUT (&#36;{(total * 1.2).toFixed(2)})
               </Text>
             </TouchableOpacity>
           </View>
