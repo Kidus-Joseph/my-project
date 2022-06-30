@@ -323,10 +323,10 @@ const ProductInfo = ({route, navigation}) => {
                 maxWidth: '85%',
                 color: COLOURS.black,
                 marginBottom: 4,
-              }}>Price - &#36; {calcFunction(x, y, z)}
+              }}>Price - &#36; {calcFunction(x, y, z).toFixed(2)}
               </Text>
               <Text>
-                Full Price - &#36;{product.productPrice}
+                Full Price - &#36;{product.productPrice.toFixed(2)}
               </Text>
             </View>
           </View>

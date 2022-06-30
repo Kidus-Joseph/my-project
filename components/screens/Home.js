@@ -161,7 +161,7 @@ const Home = ({navigation}) => {
                         </View>
                     ) 
                 ): null}
-                <Text> &#36; {calcPrices(data.productPrice, data.offPercentage, data.isOff)} </Text>
+                <Text> &#36; {calcPrices(data.productPrice, data.offPercentage, data.isOff).toFixed(2)} </Text>
             </TouchableOpacity>
         );
     };
