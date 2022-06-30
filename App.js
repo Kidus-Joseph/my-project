@@ -7,6 +7,7 @@ import {} from '@react-native-async-storage/async-storage'
 import Home from './components/screens/Home';
 import MyCart from './components/screens/MyCart';
 import ProductInfo from './components/screens/ProductInfo';
+import React from 'react';
 
 const App = () => {
 
